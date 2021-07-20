@@ -1,0 +1,17 @@
+.idea/
+*.log
+npm-debug.log
+yarn-error.log
+.DS_Store
+build/
+node_modules/
+dist/
+.cache
+.next
+.env
+.now
+
+demos
+demos/
+wordpress
+wordpress/
