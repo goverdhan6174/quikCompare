@@ -68,7 +68,6 @@ const HeroCarousel = ({ heroCarousel }) => {
                 layout="fill"
                 // sourceUrl={item?.image?.sourceUrl ?? ""}
                 src={DEFAULT_HERO_CAROUSEL_IMG_URL}
-                altText={item?.image?.altText ?? item.slug}
               />
             </div>
           );
@@ -77,6 +76,7 @@ const HeroCarousel = ({ heroCarousel }) => {
           <button className="focus:outline-none" onClick={nextSlide}>
             <svg
               width="25px"
+              height="auto"
               className="inline-block mr-3"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
