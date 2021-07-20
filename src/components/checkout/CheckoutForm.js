@@ -52,8 +52,6 @@ const defaultCustomerInfo = {
 };
 
 const CheckoutForm = ({ countriesData }) => {
-  console.log("CHECKOUT FORM ", countriesData);
-
   const { billingCountries, shippingCountries } = countriesData || {};
 
   const initialState = {
