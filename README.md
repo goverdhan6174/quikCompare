@@ -1,9 +1,6 @@
-# [Nextjs WooCommerce Theme] :rocket:
+# [Nextjs WooCommerce Theme]
 
-> - This theme, built with Next JS, GraphQl and need to bind Wordpress Woocommerce Api
-> - contains: Products Page, Single Product Page, AddToCart, CartPage and Checkout Page.
-
-## Getting Started :rocket:
+## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development purposes.
 
@@ -19,13 +16,18 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Download and activate the following plugins , in your WordPress plugin directory:
 
-- [wp-graphql] Exposes graphql for WordPress ( **Tested with v-1.3.8** of this plugin )
-- [wp-graphql-woocommerce]Adds Woocommerce functionality to a WPGraphQL schema ( **Tested with v-0.8.1** of this plugin )
-
-- Make sure Woocommerce plugin is also installed in your WordPress site. You can also import default wooCommerce products that come with wooCommerce Plugin for development ( if you don't have any products in your WordPress install ) `WP Dashboard > Tools > Import > WooCommerce products(CSV)`: The WooCommerce default products csv file is available at `wp-content/plugins/woocommerce/sample-data/sample_products.csv`
+- [wp-graphql] Exposes graphql for WordPress 
+- [wp-graphql-woocommerce] Adds Woocommerce functionality to a WPGraphQL schema
+- Make sure Woocommerce plugin is also installed in your WordPress site.
 
 ## Hero Carousel.
 
 To use Hero carousel, create a category called 'offers' from WordPress Dashboard > Products > Categories.
 Now create and assign as many child categories to this parent 'offers' category with name, description and image.
 These Child categories data will automatically be used to create hero carousel on the frontend.
+
+## Configuration(for GraphQL implementation) :wrench:
+
+- _Note_ Below is for GraphQL implementation , for REST API check [feature/rest-api] branch
+
+- (Required) Create a `.env` file taking reference from `.env-example` and update your WordPressSite URL.
