@@ -32,11 +32,13 @@ export default function Product(props) {
                 <GalleryCarousel gallery={product?.galleryImages?.nodes} />
               ) : !isEmpty(product.image) ? (
                 <img
-                  src={product?.image?.sourceUrl}
+                  src={product?.image?.altText}
                   alt="Product Image"
                   width="100%"
                   height="auto"
-                  srcSet={product?.image?.srcSet}
+                  srcSet={product?.image?.altText}
+                  className="object-cover"
+                  style={{ maxHeight: "32rem" }}
                 />
               ) : (
                 <img

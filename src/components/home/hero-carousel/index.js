@@ -66,8 +66,10 @@ const HeroCarousel = ({ heroCarousel }) => {
               {/* <img src={item?.image?.sourceUrl} srcSet={item?.image?.srcSet} loading="lazy"/> */}
               <Img
                 layout="fill"
-                // sourceUrl={item?.image?.sourceUrl ?? ""}
-                src={DEFAULT_HERO_CAROUSEL_IMG_URL}
+                sourceUrl={
+                  item?.image?.altText ?? DEFAULT_HERO_CAROUSEL_IMG_URL
+                }
+                src={item?.image?.altText ?? DEFAULT_HERO_CAROUSEL_IMG_URL}
                 altText={item?.image?.altText ?? item.slug}
               />
             </div>

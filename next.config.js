@@ -25,8 +25,8 @@ module.exports = {
     domains: [
       allowedImageWordPressDomain,
       "via.placeholder.com",
-      "picsum.photos",
-      "source.unsplash.com"
+      "source.unsplash.com",
+      "images.unsplash.com",
     ],
   },
 };

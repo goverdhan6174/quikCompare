@@ -5,6 +5,9 @@ import ParentCategoriesBlock from "../src/components/category/category-block/Par
 import PRODUCTS_AND_CATEGORIES_QUERY from "../src/queries/product-and-categories";
 import HeroCarousel from "../src/components/home/hero-carousel";
 
+import { motion } from "framer-motion";
+import { fadeInUp } from "../src/animation";
+
 export default function Home(props) {
   const { products, productCategories, heroCarousel } = props || {};
 
@@ -24,13 +27,18 @@ export default function Home(props) {
         <h2 className="products-main-title main-title mb-5 text-xl uppercase">
           <span className="main-title-inner">Products</span>
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+        <motion.div
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4"
+          initial="initial"
+          animate="animate"
+          variants={fadeInUp}
+        >
           {products.length
             ? products.map((product) => (
                 <Product key={product.id} product={product} />
               ))
             : ""}
-        </div>
+        </motion.div>
       </div>
     </Layout>
   );

@@ -13,6 +13,7 @@ export const PRODUCT_BY_CATEGORY_SLUG = gql` query PRODUCT_BY_CATEGORY_SLUG($slu
 		  description
 		  image {
 			id
+			altText
 			uri
 			title
 			srcSet
